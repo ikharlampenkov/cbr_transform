@@ -1,0 +1,12 @@
+{
+  "ssl": false,
+  "host": "127.0.0.1",
+  "port": 5432,
+  "schema": "public",
+  "database": "econom",
+  "password": "123456",
+  "username": "postgres",
+  "tunnel_method": {
+    "tunnel_method": "NO_TUNNEL"
+  }
+}
