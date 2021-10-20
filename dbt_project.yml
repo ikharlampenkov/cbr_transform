@@ -41,7 +41,7 @@ quoting:
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  airbyte_utils:
+  cbr_transform:
     generated:
       airbyte_ctes:
         +tags: airbyte_internal_cte
@@ -55,4 +55,8 @@ models:
     +materialized: table
 
 vars:
-  dbt_utils_dispatch_list: ['airbyte_utils']
+  dbt_utils_dispatch_list: ['cbr_transform']
+
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['cbr_transform', 'dbt_utils']
